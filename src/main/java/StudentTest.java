@@ -21,8 +21,22 @@ public class StudentTest {
     }
 
     @Test
+    public void testIfAnythingIsNull(){
+        Student captainNull = new Student(null, 345);
+        assertNotNull(captainNull.getName());
+    }
+
+    @Test
     public void testingGradeAverage(){
         assertEquals(85, testingDude.getGradeAverage());
+    }
+
+    @Test
+    public void testingToSeeIfWeCanSetNameAndId(){
+        testingDude.setName("Brunch");
+        testingDude.setId(8675309);
+        assertEquals("Brunch", testingDude.getName());
+        assertEquals(8675309, testingDude.getId());
     }
 
 }

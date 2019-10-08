@@ -8,8 +8,12 @@ public class Student {
 
     public Student(String name, long id) {
         this.id = id;
-        this.name = name;
-        this.grades = new ArrayList<Integer>();
+        if(name != null) {
+            this.name = name;
+        }else {
+            this.name = "default";
+        }
+        this.grades = new ArrayList<>();
     }
 
     public long getId() {
